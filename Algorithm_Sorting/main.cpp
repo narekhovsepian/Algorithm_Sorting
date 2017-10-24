@@ -7,9 +7,9 @@ int main() {
 	Algorithm_Sorting b;
 	//b.Quick(a, 0, 7);
 	//b.Merge(a, 0, 7);
-///b.Selection(a, 8);
+b.Selection(a, 8);
 	//b.Insertion(a, 8);
-	b.Bubble(a, 8);
+	//b.Bubble(a, 8);
 
 	for (int i = 0; i < 8; ++i) {
 		std::cout << a[i] << "   ";
