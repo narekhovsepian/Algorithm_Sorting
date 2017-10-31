@@ -43,7 +43,7 @@ void Algorithm_Sorting::merge_sort(int* arr, int l, int m, int r) {
 int Algorithm_Sorting::partition(int* arr, int low, int high) {
 	int pivot = arr[high];
 	int i = low - 1;
-	for (int j = low; j < high - 1; ++j) {
+	for (int j = low; j <= high - 1; ++j) {
 		if (pivot >= arr[j]) {
 			++i;
 			swap(&arr[i], &arr[j]);
