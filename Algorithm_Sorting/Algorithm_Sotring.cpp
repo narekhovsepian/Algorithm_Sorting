@@ -1,6 +1,8 @@
 #include"Algorithm_Sotring.h"
 
 void Algorithm_Sorting::merge_sort(int* arr, int l, int m, int r) {
+
+
 	int i, j, k;
 	int n1 = m - l + 1;
 	int n2 = r - m;
@@ -74,8 +76,11 @@ void Algorithm_Sorting::Quick(int* arr, int  low, int high) {
 		int pi = partition(arr, low, high);
 		Quick(arr, low, pi - 1);
 		Quick(arr, pi + 1, high);
+
 	}
+
 }
+
 void Algorithm_Sorting::Bubble(int* arr, const int& size) {
 	for (int i = size - 1; i >= 0; --i) {
 		for (int j = 0; j < i; ++j) {
@@ -84,6 +89,7 @@ void Algorithm_Sorting::Bubble(int* arr, const int& size) {
 			}
 		}
 	}
+
 }
 void Algorithm_Sorting::Insertion(int* arr, const int& size) {
 	for (int i = 0; i < size; ++i) {
@@ -97,6 +103,7 @@ void Algorithm_Sorting::Insertion(int* arr, const int& size) {
 		}
 		arr[j + 1] = key;
 	}
+
 }
 
 void Algorithm_Sorting::Selection(int* arr, const int& size) {
@@ -110,7 +117,19 @@ void Algorithm_Sorting::Selection(int* arr, const int& size) {
 		}
 		swap(&arr[key], &arr[i]);
 	}
+
 }
 
+Algorithm_Sorting* Algorithm_Sorting::_instance = 0;
+
+
+Algorithm_Sorting* Algorithm_Sorting::getInstance() {
+	if (!_instance) {
+		_instance = new Algorithm_Sorting();
+	}
+	return _instance;
+
+}
+Algorithm_Sorting::Algorithm_Sorting() {}
 
 
